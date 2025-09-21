@@ -1,16 +1,23 @@
 <script>
+  let activityTitle = $state()
+  let activityDesc = $state()
   const saveActivity = () => {
-    console.log("This was clicked")
+    console.log(activityDesc);
+    console.log(activityTitle);
+    
+    activityDesc = "";
+    activityTitle = "";
+    
   }
 </script>
 
 <div class="activity-two">
   <div class="inputs">
     <div class="activity-title-input">
-      <input type="text" placeholder="Activity Title"/>
+      <input type="text" placeholder="Activity Title" bind:value={activityTitle}/>
     </div>
     <div class="activity-description-input">
-        <input type="text" placeholder="Activity Description"/>
+        <input type="text" placeholder="Activity Description" bind:value={activityDesc}/>
     </div>
   </div>
   <div class="submit-button">
@@ -26,7 +33,7 @@
   }
 
   .activity-two {
-    display: inline-flex;
+    display: flex;
     background-color: var(--secondary-color);
     padding: .25rem;
     padding-top: .75rem;

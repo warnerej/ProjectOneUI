@@ -5,7 +5,12 @@
 </script>
 
 <div class="activity-three">
+
   <div class="checkboxes">
+    <div id="question">
+      Goal Feeling:
+    </div>
+
     <label id="good">
       <input type="checkbox" />
         Good
@@ -38,25 +43,29 @@
 
 <style>
   .activity-three {
-    display: inline-flex;
+    display: flex;
     background-color: var(--secondary-color);
-    padding: .25rem;
-    padding-top: .75rem;
     border-radius: .25rem;
     border: 2px solid var(--accent-color); 
+    padding: .5rem;
+    justify-content: center;
+  }
+
+  #question{
 
   }
 
   .checkboxes {
     justify-content: center;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    color: black;
-    margin-bottom: .1rem;
+    color: var(--accent-color);
+    font-weight: bold;
   }
 
   .checkboxes label {
     margin: .1rem;
+    white-space: nowrap;
   }
 
   .goal-input {

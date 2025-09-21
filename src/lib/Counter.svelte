@@ -56,7 +56,7 @@
 
   /* Activity */
   .activity-one {
-    display: inline-flex;
+    display: flex;
     background-color: var(--secondary-color);
     padding: .25rem;
     padding-bottom: .4rem;

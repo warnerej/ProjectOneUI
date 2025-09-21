@@ -5,41 +5,10 @@
   --hover-color: #306e6a;
 }
 
-.topnav h1{
-  display: flex;
-  justify-content: center;
-  align-items: center;       
-  padding: 1rem 2rem;
-  position: relative;
-  background-color: var(--secondary-color);
-}
-
-#title {
-  font-size: 2.5rem;
-  color: var(--accent-color);
-}
-
-#time {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--accent-color);
-}
-
-/* Card below */
-
-
 body {
   margin: 0;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: var(--primary-color);
-  color: rgba(255, 255, 255, 0.87);
-}
-
-h1 {
-  margin: 0;
 }
 
 html {

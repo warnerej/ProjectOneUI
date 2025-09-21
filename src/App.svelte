@@ -41,17 +41,38 @@
 </main>
 
 <style>
-  .counter-div {
-    margin-right: 1rem;
-  }
 
-  .activity-div {
-    margin-right: 1rem;
-  }
+.topnav h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;       
+  padding: 1rem 2rem;
+  position: relative;
+  background-color: var(--secondary-color);
+  margin: 0;
+  width: 100%;
+}
+
+#title {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+#time {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
 
 .card {
   display: inline-flex;
   flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
   padding: 2rem;
+  width: 100%;
 }
 </style>
