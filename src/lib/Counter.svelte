@@ -59,7 +59,7 @@
     display: flex;
     background-color: var(--secondary-color);
     padding: .25rem;
-    padding-bottom: .4rem;
+    padding-bottom: .5rem;
     border: 2px solid var(--accent-color);
     border-radius: .25rem;
   }
