@@ -1,5 +1,7 @@
 <script>
   import Counter from './lib/Counter.svelte'
+  import Activity from './lib/Activity.svelte'
+  import Goal from './lib/Goal.svelte'
   import { onDestroy } from 'svelte';
 
   let time = new Date().toLocaleTimeString();
@@ -21,8 +23,35 @@
 
 
   <div class="card">
-    <Counter />
+    <div class="counter-div">
+      <Counter />
+    </div>
+
+    <div class="activity-div">
+      <Activity />
+    </div>
+
+    <div class="goal-div">
+      <Goal />
+    </div>
+
   </div>
+
 
 </main>
 
+<style>
+  .counter-div {
+    margin-right: 1rem;
+  }
+
+  .activity-div {
+    margin-right: 1rem;
+  }
+
+.card {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 2rem;
+}
+</style>

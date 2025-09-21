@@ -1,38 +1,47 @@
-.topnav {
+:root {
+  --primary-color: #FAF3DD;
+  --secondary-color:  #C8D5B9;
+  --accent-color: #68B0AB;
+  --hover-color: #306e6a;
+}
+
+.topnav h1{
   display: flex;
-  justify-content: space-between; /* title left/right spacing */
-  align-items: center;            /* vertically center */
-  width: 100%;
+  justify-content: center;
+  align-items: center;       
   padding: 1rem 2rem;
-  background-color: #2d2f3a;
-  box-sizing: border-box;
+  position: relative;
+  background-color: var(--secondary-color);
 }
 
 #title {
-  flex: 1;
-  text-align: center;
-  margin: 0;
   font-size: 2.5rem;
+  color: var(--accent-color);
 }
 
 #time {
-  margin: 0;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
   font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent-color);
 }
 
 /* Card below */
-.card {
-  padding: 2rem;
-  text-align: left;
-}
+
 
 body {
   margin: 0;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #242424;
+  background-color: var(--primary-color);
   color: rgba(255, 255, 255, 0.87);
 }
 
 h1 {
   margin: 0;
+}
+
+html {
+  font-size: 25px
 }
