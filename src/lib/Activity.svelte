@@ -37,7 +37,7 @@
       <input type="text" placeholder="Activity Title" bind:value={activityTitle}/>
     </div>
     <div class="activity-description-input">
-        <input type="text" placeholder="Activity Description" bind:value={activityDesc}/>
+        <textarea placeholder="Activity Description" bind:value={activityDesc}></textarea>
     </div>
   </div>
   <div class="submit-button">
@@ -123,9 +123,11 @@
     margin-left: 1rem;
   }
 
-  .activity-description-input input{
+  .activity-description-input textarea{
     width: 9rem;
     padding-bottom: 6rem;
+    margin-top: .6rem;
+    resize: none;
   }
 
   .activity-title-input input{

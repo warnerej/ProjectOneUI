@@ -37,7 +37,7 @@
   </div>
 
   <div class="goal-input">
-    <input type="text" placeholder="Input your goal"/>
+    <textarea placeholder="Input your goal"></textarea>
   </div>
 
   <div class="submit-button">
@@ -79,11 +79,13 @@
   .goal-input {
     display: inline-flex;
     margin: 1rem;
+    margin-bottom: 0rem;
   }
 
-  .goal-input input{
+  .goal-input textarea{
     width: 8rem;
     padding-bottom: 6rem;
+    resize: none;
   }
 
   .submit-button {
