@@ -1,15 +1,35 @@
 <script>
-  let activityTitle = $state()
-  let activityDesc = $state()
+  import ActivitySaved from "./ActivitySaved.svelte";
+
+  let activityTitle = $state();
+  let activityDesc = $state();
+
+  let sendTitle = $state();
+  let sendDesc = $state();
+
+  let pastActivities = $state([]);
+
+  const addActivity = () => {
+    pastActivities = [...pastActivities, {title: sendTitle, description: sendDesc}]
+  }
+
   const saveActivity = () => {
-    console.log(activityDesc);
-    console.log(activityTitle);
-    
+
+    sendTitle = activityTitle;
+    sendDesc = activityDesc;
+    if (sendTitle != "" && sendDesc != "") {
+      addActivity();
+    }
+
     activityDesc = "";
-    activityTitle = "";
-    
+    activityTitle = "";    
+
   }
 </script>
+
+<div class="past-activity-title">
+  Activities Tracker:
+</div>
 
 <div class="activity-two">
   <div class="inputs">
@@ -25,11 +45,45 @@
   </div>
 </div>
 
+<div class="past-activity-title">
+  Past Activities:
+</div>
+
+<div class="scrolled-activity">
+  {#each pastActivities as pastActivity}
+    <ActivitySaved title={pastActivity.title} description={pastActivity.description} />
+  {/each}
+</div>
+
+
+
 
 <style>
   input::placeholder {
     text-align: left;
     padding-top: 5px;
+  }
+
+  .past-activity-title {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+
+  .scrolled-activity {
+    display: flex;
+    flex-direction: column;
+
+    height: 10rem;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--accent-color);
+    border-radius: .25rem;
+    padding: 0.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-width: 14.75rem;
   }
 
   .activity-two {

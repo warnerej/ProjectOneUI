@@ -18,17 +18,18 @@
   <div class="topnav">
     <h1 id="title">Language Tracker</h1>
     <p id="time">Hello Elliot, it's currently {time}</p>
+    <p id="user-since">You have been a user since 2022</p>
   </div>
 
 
 
   <div class="card">
-    <div class="counter-div">
-      <Counter />
-    </div>
-
     <div class="activity-div">
       <Activity />
+    </div>
+
+    <div class="counter-div">
+      <Counter />
     </div>
 
     <div class="goal-div">
@@ -46,7 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;       
-  padding: 1rem 2rem;
+  padding: 1rem;
   position: relative;
   background-color: var(--secondary-color);
   margin: 0;
@@ -61,6 +62,15 @@
 #time {
   position: absolute;
   right: 1rem;
+  top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+#user-since {
+  position: absolute;
+  left: 1rem;
   top: 1rem;
   font-size: 1rem;
   font-weight: bold;

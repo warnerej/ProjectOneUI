@@ -4,6 +4,10 @@
   }
 </script>
 
+<div class="goal-title">
+  Goal Tracker:
+</div>
+
 <div class="activity-three">
 
   <div class="checkboxes">
@@ -51,8 +55,12 @@
     justify-content: center;
   }
 
-  #question{
-
+  .goal-title {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
   }
 
   .checkboxes {

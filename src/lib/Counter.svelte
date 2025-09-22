@@ -26,6 +26,10 @@
   let selectedDate = $state(new Date()); // Initialize with a default date
 </script>
 
+<div class="hour-header">
+  Hour Tracker:
+</div>
+
 <div class ="activity-one">
   <div class="hour-date">
     <div class="hour-wrapper">
@@ -64,6 +68,14 @@
     border-radius: .25rem;
   }
   /* Activity End*/
+
+  .hour-header {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
 
   /* Hour Date */
   .hour-date {
