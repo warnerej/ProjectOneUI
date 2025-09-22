@@ -93,7 +93,7 @@
 .past-activity-title {
     color: var(--accent-color);
     font-weight: bold;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-top: 1rem;
     margin-bottom: .5rem;
   }
@@ -104,8 +104,8 @@
 
     height: 10rem;
     background-color: var(--secondary-color);
-    border: 2px solid var(--accent-color);
-    border-radius: .25rem;
+    /* border: 2px solid var(--accent-color); */
+    border-radius: .5rem;
     padding: 0.5rem;
     overflow-y: auto;
     overflow-x: hidden;
@@ -118,8 +118,8 @@
     background-color: var(--secondary-color);
     padding: .25rem;
     padding-bottom: .5rem;
-    border: 2px solid var(--accent-color);
-    border-radius: .25rem;
+    /* border: 2px solid var(--accent-color); */
+    border-radius: .5rem;
     max-height: 10.3rem;
     min-height: 10.3rem;
   }
@@ -128,7 +128,7 @@
   .hour-header {
     color: var(--accent-color);
     font-weight: bold;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-top: 1rem;
     margin-bottom: .5rem;
   }
@@ -138,7 +138,6 @@
     display: inline-flex;
     flex-direction: column;
     margin-right: 1rem;
-    padding-left: 1rem;
   }
   /* Hour Date*/
 
@@ -150,7 +149,7 @@
     padding: .75rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    border-left: 2px solid var(--accent-color);
+    /* border-left: 2px solid var(--accent-color); */
 
   }
 
@@ -158,7 +157,7 @@
     width: 2rem;
     height: 8rem;
     border: 0;
-    border-radius: .25rem;
+    border-radius: .5rem;
     background-color: var(--accent-color);
     font-size: 1rem;
     font-weight: bold;
@@ -181,14 +180,14 @@
     flex-direction: column;
     color: var(--accent-color);
     font-weight: bold;
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
 
   .hour-counter {
     display: inline-flex;
     align-items: center;
     padding: 0.25rem;
-    border-radius: .25rem;
+    border-radius: .5rem;
     background-color: var(--secondary-color);
   }
 
@@ -213,7 +212,7 @@
     margin: .2vw;
     font-size: 0.8rem;
     background-color: var(--accent-color);
-    border-radius: .25rem;
+    border-radius: .5rem;
     border: 0px;
   }
 
@@ -227,14 +226,14 @@
     display: inline-flex;
     flex-direction: column;
     padding: .25rem;
-    border-radius: .25rem;
+    border-radius: .5rem;
     background-color: var(--secondary-color);
   }
 
   .date-title {
     color: var(--accent-color);
     font-weight: bold;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     padding-bottom: .25rem;
   }
   /*Date Selection Ends*/

@@ -77,8 +77,13 @@
   .past-activity-title {
     color: var(--accent-color);
     font-weight: bold;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+
+  #question {
+    font-weight: bold;
     margin-bottom: .5rem;
   }
 
@@ -88,8 +93,8 @@
 
     height: 10rem;
     background-color: var(--secondary-color);
-    border: 2px solid var(--accent-color);
-    border-radius: .25rem;
+    /* border: 2px solid var(--accent-color); */
+    border-radius: .5rem;
     padding: 0.5rem;
     overflow-y: auto;
     overflow-x: hidden;
@@ -100,8 +105,8 @@
   .activity-three {
     display: flex;
     background-color: var(--secondary-color);
-    border-radius: .25rem;
-    border: 2px solid var(--accent-color); 
+    border-radius: .5rem;
+    /* border: 2px solid var(--accent-color);  */
     padding: .5rem;
     justify-content: center;
     max-height: 10rem;
@@ -111,7 +116,7 @@
   .goal-title {
     color: var(--accent-color);
     font-weight: bold;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-top: 1rem;
     margin-bottom: .5rem;
   }
@@ -148,14 +153,14 @@
     padding: .75rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    border-left: 2px solid var(--accent-color);
+    /* border-left: 2px solid var(--accent-color); */
   }
 
   .submit-button button {
     width: 2rem;
     height: 8rem;
     border: 0;
-    border-radius: .25rem;
+    border-radius: .5rem;
     background-color: var(--accent-color);
     font-size: 1rem;
     font-weight: bold;

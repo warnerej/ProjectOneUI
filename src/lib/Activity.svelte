@@ -50,6 +50,8 @@
 </div>
 
 <div class="scrolled-activity">
+  <ActivitySaved title={"Reading"} description={"I read a book about something and did something else"} />
+  <ActivitySaved title={"Speaking"} description={"I talked to a friend about something and it was really fun"} />
   {#each pastActivities as pastActivity}
     <ActivitySaved title={pastActivity.title} description={pastActivity.description} />
   {/each}
@@ -64,7 +66,7 @@
   .past-activity-title {
     color: var(--accent-color);
     font-weight: bold;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-top: 1rem;
     margin-bottom: .5rem;
   }
@@ -75,8 +77,8 @@
 
     height: 10rem;
     background-color: var(--secondary-color);
-    border: 2px solid var(--accent-color);
-    border-radius: .25rem;
+    /*border: 2px solid var(--accent-color);*/
+    border-radius: .5rem;
     padding: 0.5rem;
     overflow-y: auto;
     overflow-x: hidden;
@@ -88,8 +90,8 @@
     background-color: var(--secondary-color);
     padding: .25rem;
     padding-top: .75rem;
-    border-radius: .25rem;
-    border: 2px solid var(--accent-color); 
+    border-radius: .5rem;
+    /* border: 2px solid var(--accent-color);  */
     max-height: 10rem;
     min-height: 10rem;
   }
@@ -101,14 +103,14 @@
     padding: .75rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    border-left: 2px solid var(--accent-color);
+    /* border-left: 2px solid var(--accent-color); */
   }
 
   .submit-button button {
     width: 2rem;
     height: 8rem;
     border: 0;
-    border-radius: .25rem;
+    border-radius: .5rem;
     background-color: var(--accent-color);
     font-size: 1rem;
     font-weight: bold;
