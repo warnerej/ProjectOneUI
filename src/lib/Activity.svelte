@@ -90,6 +90,8 @@
     padding-top: .75rem;
     border-radius: .25rem;
     border: 2px solid var(--accent-color); 
+    max-height: 10rem;
+    min-height: 10rem;
   }
 
   .submit-button {

@@ -53,6 +53,8 @@
     border: 2px solid var(--accent-color); 
     padding: .5rem;
     justify-content: center;
+    max-height: 10rem;
+    min-height: 10rem;
   }
 
   .goal-title {

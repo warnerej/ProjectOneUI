@@ -120,6 +120,8 @@
     padding-bottom: .5rem;
     border: 2px solid var(--accent-color);
     border-radius: .25rem;
+    max-height: 10.3rem;
+    min-height: 10.3rem;
   }
   /* Activity End*/
 
