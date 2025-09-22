@@ -1,7 +1,17 @@
 <script>
+  import ActivitySaved from "./ActivitySaved.svelte";
   let count = $state(0)
   let hoursStudied = $state(0)
   let dateEntry = $state(new Date())
+
+  let sendcount = $state();
+  let senddateEntry = $state();
+
+  let pastActivities = $state([]);
+
+  const addActivity = () => {
+    pastActivities = [...pastActivities, {title: sendcount, description: senddateEntry}]
+  }
 
   const increment = () => {
     if (count < 24){
@@ -18,6 +28,14 @@
     console.log(hoursStudied)
     dateEntry = selectedDate;
     console.log(dateEntry)
+
+    sendcount = count;
+    senddateEntry = dateEntry;
+    if (sendcount != 0) {
+      addActivity();
+    }
+
+    count = 0;   
 
     console.log(`You have studied ${count} hours on ${selectedDate}`)
   }
@@ -52,11 +70,47 @@
   <div class="submit-button">
     <button onclick={saveActivity}>Submit</button>
   </div>
+</div>
 
+<div class="past-activity-title">
+  Past Hours:
+</div>
+
+<div class="scrolled-activity">
+  {#each pastActivities as pastActivity}
+    {#if (pastActivity.title == 1)}
+      <ActivitySaved title={"You studied: " + pastActivity.title + " hour"} description={"On: " + pastActivity.description} />
+    {/if}
+    {#if (pastActivity.title > 1)}
+      <ActivitySaved title={"You studied: " + pastActivity.title + " hours"} description={"On: " + pastActivity.description} />
+    {/if}
+  {/each}
 </div>
 
 
 <style>
+
+.past-activity-title {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+
+  .scrolled-activity {
+    display: flex;
+    flex-direction: column;
+
+    height: 10rem;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--accent-color);
+    border-radius: .25rem;
+    padding: 0.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-width: 14.3rem;
+  }
 
   /* Activity */
   .activity-one {

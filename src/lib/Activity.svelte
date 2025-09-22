@@ -55,9 +55,6 @@
   {/each}
 </div>
 
-
-
-
 <style>
   input::placeholder {
     text-align: left;
