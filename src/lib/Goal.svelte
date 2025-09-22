@@ -1,6 +1,24 @@
 <script>
+  import ActivitySaved from "./ActivitySaved.svelte";
   const saveActivity = () => {
-    console.log("This was clicked")
+    sendChoice = choice;
+    sendGoal = goalInput;
+
+    addActivity();
+
+    choice = "";
+    goalInput = "";
+  }
+  let choice = $state("");
+  let goalInput = $state("");
+
+  let sendChoice = $state();
+  let sendGoal = $state();
+
+  let pastActivities = $state([]);
+
+  const addActivity = () => {
+    pastActivities = [...pastActivities, {title: sendChoice, description: sendGoal}]
   }
 </script>
 
@@ -16,28 +34,28 @@
     </div>
 
     <label id="good">
-      <input type="checkbox" />
+      <input type="radio" bind:group={choice} value="Good"/>
         Good
     </label>
 
     <label id="okay">
-      <input type="checkbox" />
+      <input type="radio" bind:group={choice} value="Okay"/>
         Okay
     </label>
 
     <label id="bad">
-      <input type="checkbox" />
+      <input type="radio" bind:group={choice} value="Bad"/>
         Bad
     </label>
 
     <label id="not-Sure">
-      <input type="checkbox" />
+      <input type="radio" bind:group={choice} value="Not Sure"/>
         Not Sure
     </label>
   </div>
 
   <div class="goal-input">
-    <textarea placeholder="Input your goal"></textarea>
+    <textarea placeholder="Input your goal" bind:value={goalInput}></textarea>
   </div>
 
   <div class="submit-button">
@@ -45,7 +63,40 @@
   </div>
 </div>
 
+<div class="past-activity-title">
+  Past Goals:
+</div>
+
+<div class="scrolled-activity">
+  {#each pastActivities as pastActivity}
+    <ActivitySaved title={"You feel " + pastActivity.title + " about: "} description={pastActivity.description} />
+  {/each}
+</div>
+
 <style>
+  .past-activity-title {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+
+  .scrolled-activity {
+    display: flex;
+    flex-direction: column;
+
+    height: 10rem;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--accent-color);
+    border-radius: .25rem;
+    padding: 0.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    max-width: 20.5rem;
+  }
+
   .activity-three {
     display: flex;
     background-color: var(--secondary-color);
