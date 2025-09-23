@@ -68,6 +68,8 @@
 </div>
 
 <div class="scrolled-activity">
+  <ActivitySaved title={"You Feel Good about: "} description={"Speaking more often"} />
+  <ActivitySaved title={"You Feel Bad about: "} description={"Reading Kanji"} />
   {#each pastActivities as pastActivity}
     <ActivitySaved title={"You feel " + pastActivity.title + " about: "} description={pastActivity.description} />
   {/each}

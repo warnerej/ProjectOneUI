@@ -18,15 +18,20 @@
     color: var(--accent-color);
     width: 100%;
     margin-bottom: 1rem;
+    background-color: #cacaca;
+    border-radius: .5rem;
+    padding: .2rem;
+  }
+
+  .total:hover {
+    background-color: #b4b4b4;
   }
 
   .activity-title {
-    text-decoration: underline;
     font-weight: bold;
-    border-top: 2px solid var(--accent-color);
   }
 
   .activity-description {
-    border-bottom: 2px solid var(--accent-color);
+    font-size: .75rem;
   }
 </style>

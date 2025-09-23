@@ -42,13 +42,25 @@
     </div>
   </div>
 
-  <button on:click={toggleTheme}>
+  <button on:click={toggleTheme} class="theme-button">
     {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
 </main>
 
 
 
 <style>
+
+.theme-button {
+  width: 8rem;
+  height: 3rem;
+  border: 0;
+  border-radius: .5rem;
+  background-color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
 :root {
   --primary-color: #ffffff;
   --secondary-color:  #F5F5F7;

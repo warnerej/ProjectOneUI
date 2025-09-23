@@ -77,6 +77,8 @@
 </div>
 
 <div class="scrolled-activity">
+  <ActivitySaved title={"You studied: 3 hours"} description={"On: Mon Sep 22 2025 20:27:12 GMT-0400 (Eastern Daylight Time)"} />
+  <ActivitySaved title={"You studied: 4 hours"} description={"On: Mon Sep 22 2025 20:27:12 GMT-0400 (Eastern Daylight Time)"} />
   {#each pastActivities as pastActivity}
     {#if (pastActivity.title == 1)}
       <ActivitySaved title={"You studied: " + pastActivity.title + " hour"} description={"On: " + pastActivity.description} />
